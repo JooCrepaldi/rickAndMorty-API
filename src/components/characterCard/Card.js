@@ -1,24 +1,18 @@
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import React from 'react';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { styles } from './CardStyle';
 
-export default function CharacterCard() {
+export default function CharacterCard({character}) {
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.card} activeOpacity={0.9}>
                 <Image
-                    source={{
-                        uri: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'
-                    }}
+                    source={{uri: character.image}}
                     style={styles.image}
                 />
                 <View style={styles.content}>
-                    <Text style={styles.name}>Rick</Text>
-                    <Text style={styles.status}>Alive</Text>
-
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>Ver Detalhes</Text>
-                    </TouchableOpacity>
+                    <Text style={styles.name}>{character.name}</Text>
+                    <Text style={styles.status}>{character.status}</Text>
                 </View>
             </TouchableOpacity>
         </View>

@@ -1,13 +1,9 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { theme } from '../../theme/appTheme';
-
-const { colors, spacing, typography } = theme
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.background, // cinza-azulado claro
         alignItems: 'center',
         padding: 20,
     },
@@ -39,6 +35,7 @@ export const styles = StyleSheet.create({
     },
 
     name: {
+        fontFamily: 'ShadowsIntoLight_400Regular',
         fontSize: 20,
         fontWeight: '700',
         color: '#1E293B', // azul petróleo
@@ -49,19 +46,5 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         color: '#64748B',
         marginBottom: 10,
-    },
-
-    button: {
-        backgroundColor: '#3B82F6',
-        paddingVertical: 8,
-        paddingHorizontal: 16,
-        borderRadius: 10,
-        alignSelf: 'flex-start',
-    },
-
-    buttonText: {
-        color: '#fff',
-        fontWeight: '600',
-        fontSize: 14,
     },
 });

@@ -11,7 +11,7 @@ export default function AppNavigator() {
   return (
     <NavigationContainer>
         <stack.Navigator initialRouteName="CharactersList">
-            <stack.Screen name="CharactersList" component={CharactersListScreen} options={{ title: 'Rick and Morty Characters' }} />
+            <stack.Screen name="CharactersList" component={CharactersListScreen} options={{ title: 'Rick and Morty Characters', headerShown: false }} />
             <stack.Screen name="CharacterDetail" component={CharacterDetailScreen} options={{ title: 'Character Details' }} />
         </stack.Navigator>
     </NavigationContainer>
