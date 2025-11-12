@@ -12,7 +12,7 @@ export default function CharacterCard({character}) {
                 />
                 <View style={styles.content}>
                     <Text style={styles.name}>{character.name}</Text>
-                    <Text style={styles.status}>{character.status}</Text>
+                    <Text style={styles.status}>Status: {character.status}</Text>
                 </View>
             </TouchableOpacity>
         </View>

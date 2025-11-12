@@ -33,7 +33,7 @@ export default function CharactersListScreen() {
   }
 
   return ( //aqui está a rederização da lista a partir do CharacterCard(desenvolvido em Card.js)
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#141414ff' }}>
       <FlatList
         ListHeaderComponent={<Header />}
         data={characters}
