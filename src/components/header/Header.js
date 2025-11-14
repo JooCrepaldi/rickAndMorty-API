@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text } from 'react-native';
+import { View, Image, Text, TextInput } from 'react-native';
 import { styles } from './HeaderStyle';
 
 export default function Header() {
@@ -10,6 +10,12 @@ export default function Header() {
         style={styles.image}
       />
       <Text style={styles.title}>Characters</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Escreva aqui..."
+        placeholderTextColor="gray"
+        keyboardType="default"
+      />
     </View>
   );
 }

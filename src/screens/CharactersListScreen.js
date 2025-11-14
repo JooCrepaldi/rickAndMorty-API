@@ -42,7 +42,7 @@ export default function CharactersListScreen() {
         columnWrapperStyle={{ gap: 12 }} // opcional
         contentContainerStyle={{
           padding: 8,
-          alignItems: 'center',      // 🔥 centraliza horizontalmente
+          alignItems: 'center',
         }}
          renderItem={({ item }) => <CharacterCard character={item} />}
       />
