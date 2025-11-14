@@ -21,7 +21,7 @@ export default function CharacterCard({ character }) {
       };
 
     return (
-        <View style={styles.container}>
+        <View>
             <TouchableOpacity
                 style={styles.card}
                 activeOpacity={0.9}

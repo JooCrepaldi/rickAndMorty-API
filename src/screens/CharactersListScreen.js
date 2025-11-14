@@ -37,8 +37,14 @@ export default function CharactersListScreen() {
       <FlatList
         ListHeaderComponent={<Header />}
         data={characters}
+        numColumns={2}
         keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => <CharacterCard character={item} />}
+        columnWrapperStyle={{ gap: 12 }} // opcional
+        contentContainerStyle={{
+          padding: 8,
+          alignItems: 'center',      // 🔥 centraliza horizontalmente
+        }}
+         renderItem={({ item }) => <CharacterCard character={item} />}
       />
     </SafeAreaView>
   );

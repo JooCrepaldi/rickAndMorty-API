@@ -1,14 +1,15 @@
 import React from 'react';
 import { View, Image, Text } from 'react-native';
+import { styles } from './HeaderStyle';
 
 export default function Header() {
   return (
     <View style={{ padding: 20, alignItems: 'center' }}>
       <Image
         source={require('../../../assets/ramLogo.png')}
-        style={{ width: 200, height: 60, resizeMode: 'contain' }}
+        style={styles.image}
       />
-      <Text style={{color: '#ffff'}}>Characters</Text>
+      <Text style={styles.title}>Characters</Text>
     </View>
   );
 }

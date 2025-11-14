@@ -1,14 +1,14 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import { colors } from '../../theme/colors';
 
-export const styles = StyleSheet.create({
-    container: {
-        paddingHorizontal: 12,
-        paddingVertical: 8,
-    },
 
+const { width } = Dimensions.get('window');
+const CARD_WIDTH = (width / 2) - 24; // ajuste como preferir
+
+export const styles = StyleSheet.create({
     card: {
+        flex: 1,
         backgroundColor: colors.card,
         borderRadius: 24,
         overflow: 'hidden',
@@ -19,14 +19,16 @@ export const styles = StyleSheet.create({
         elevation: 6,
         borderWidth: 1,
         borderColor: colors.border,
+        width: CARD_WIDTH, 
+        marginBottom: 15
     },
 
     image: {
         width: '100%',
-        height: 220,
-        backgroundColor: colors.background,
+        height: 180,   // reduzido para caber em 2 colunas
+        backgroundColor: colors.background
     },
-
+    
     content: {
         paddingHorizontal: 16,
         paddingVertical: 14,
@@ -48,22 +50,5 @@ export const styles = StyleSheet.create({
         fontWeight: '600',
         textTransform: 'uppercase',
         letterSpacing: 0.3,
-    },
-
-    button: {
-        backgroundColor: colors.rickBlue,
-        paddingVertical: 11,
-        paddingHorizontal: 16,
-        borderRadius: 8,
-        marginTop: 10,
-        alignItems: 'center',
-        opacity: 1,
-    },
-
-    buttonText: {
-        color: colors.background,
-        fontWeight: '700',
-        fontSize: 13,
-        letterSpacing: 0.4,
     },
 });
