@@ -1,68 +1,92 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions, Platform } from 'react-native';
 import { colors } from '../../theme/colors';
 
+const { width } = Dimensions.get('window');
+const IMAGE_HEIGHT = Math.round(width * 0.9); // altura numérica responsiva
+
 export const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
-    backgroundColor: colors.background, // cor de fundo geral
+    backgroundColor: colors.bg,
+  },
+
+  container: {
+    width: '100%',
+    alignItems: 'flex-start', 
+    paddingHorizontal: 20,
+    paddingBottom: 32,
+    paddingTop: 16,
+  },
+
+  emptyContainer: {
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
+    backgroundColor: colors.bg,
   },
 
   image: {
-    width: 220,
-    height: 220,
-    borderRadius: 110,
-    borderWidth: 3,
-    borderColor: colors.portalGreen,
-    marginBottom: 24,
-    shadowColor: colors.portalGreen,
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.4,
-    shadowRadius: 10,
-    elevation: 8,
+    width: '100%',
+    height: IMAGE_HEIGHT,
+    borderRadius: 24,
+    marginBottom: 20,
+    backgroundColor: colors.bgLight,
   },
 
   name: {
-    fontSize: 28,
+    fontSize: 26,
+    flex: 1,
+    flexShrink: 1,
+    textAlign: 'left',
     fontWeight: '800',
-    color: colors.portalGreen,
-    textAlign: 'center',
-    marginBottom: 12,
-    letterSpacing: 1,
+    color: colors.green,
+    letterSpacing: 0.6,
   },
 
   infoContainer: {
     width: '100%',
-    backgroundColor: colors.card,
-    borderRadius: 16,
-    paddingVertical: 20,
-    paddingHorizontal: 18,
-    shadowColor: colors.portalGreen,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 6,
-    elevation: 5,
+    backgroundColor: colors.bgLight,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: colors.border,
+    paddingVertical: 18,
+    paddingHorizontal: 16,
   },
 
   infoText: {
     fontSize: 16,
-    color: colors.textPrimary,
+    color: colors.title,
     fontWeight: '600',
-    marginBottom: 8,
   },
 
   label: {
-    color: colors.textSecondary,
+    color: colors.secondaryTitle,
     fontWeight: '700',
-    fontSize: 14,
-    marginRight: 6,
+    fontSize: 13,
+    marginRight: 8,
     textTransform: 'uppercase',
   },
 
   infoRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 6,
+    marginBottom: 12,
+  },
+
+  button: {
+    width: 80,
+    height: 44,
+    borderRadius: 100,
+    backgroundColor: colors.bgLight,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 12,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+
+  bookmarkIcon: {
+    width: 22,
+    height: 22,
   },
 });

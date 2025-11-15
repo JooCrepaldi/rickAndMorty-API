@@ -3,42 +3,51 @@ import { StyleSheet } from 'react-native';
 
 export const colors = {
   // base
-  background: '#141414',      // app background (escuro)
-  card: '#1E1E1F',            // cartas / cards
-  border: '#2A2A2B',          // bordas sutis
-  glass: 'rgba(255,255,255,0.04)',
+  bg: '#0f0f0f',      // app background (escuro)
+  bgLight: '#202020',            // cartas / cards
+  border: '#38383aff',          // bordas sutis
 
   // icônicos / destaque
-  portalGreen: '#00FF7F',     // verde "portal" neon
-  rickBlue: '#88E8FF',        // azul claro do Rick
-  mortyYellow: '#FFD54A',     // amarelo da camiseta do Morty
-  accentPurple: '#7C4DFF',    // roxo para contrastes
+  green: '#5dd62c',     
+  greenDark: '#337418',  
 
   // texto / estados
-  textPrimary: '#FFFFFF',
-  textSecondary: '#BFC4C9',
+  title: '#f8f8f8',
+  secondaryTitle: '#BFC4C9',
   muted: '#6B6F73',
   success: '#2ECC71',
   danger: '#FF6B6B',
 };
 
 export const styles = StyleSheet.create({
-  appBackground: {
-    backgroundColor: colors.background,
+  bg: {
+    backgroundColor: colors.bg,
   },
-  cardBackground: {
-    backgroundColor: colors.card,
+  bgLight: {
+    backgroundColor: colors.bgLight,
   },
   border: {
     borderColor: colors.border,
   },
-  logoTint: {
-    tintColor: colors.rickBlue,
+  green: {
+    tintColor: colors.green,
   },
-  titleText: {
-    color: colors.textPrimary,
+  greenDark: {
+    tintColor: colors.greenDark,
   },
-  subtitleText: {
-    color: colors.textSecondary,
+  title: {
+    color: colors.title,
+  },
+  secondaryTitle: {
+    color: colors.secondaryTitle,
+  },
+  danger: {
+    color: colors.danger,
+  },
+  muted: {
+    color: colors.muted,
+  },
+  success: {
+    color: colors.success,
   },
 });

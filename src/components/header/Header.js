@@ -1,21 +1,16 @@
 import React from 'react';
-import { View, Image, Text, TextInput } from 'react-native';
+import { View, Image } from 'react-native';
 import { styles } from './HeaderStyle';
+import SearchBar from '../searchBar/SearchBar';
 
-export default function Header() {
+export default function Header({ onSearchChange }) {
   return (
     <View style={{ padding: 20, alignItems: 'center' }}>
       <Image
         source={require('../../../assets/ramLogo.png')}
         style={styles.image}
       />
-      <Text style={styles.title}>Characters</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Escreva aqui..."
-        placeholderTextColor="gray"
-        keyboardType="default"
-      />
+      <SearchBar onSearchChange={onSearchChange} />
     </View>
   );
 }

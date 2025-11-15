@@ -20,6 +20,17 @@ export default function CharacterCard({ character }) {
         }
       };
 
+      const getStatusColor = () => {
+        switch(character.status) {
+            case 'Alive':
+                return styles.status.Alive;
+            case 'Dead':
+                return styles.status.Dead;
+            default:
+                return styles.status;
+        }
+    };
+
     return (
         <View>
             <TouchableOpacity
@@ -33,7 +44,10 @@ export default function CharacterCard({ character }) {
                 />
                 <View style={styles.content}>
                     <Text style={styles.name}>{character.name}</Text>
-                    <Text style={styles.status}>Status: {character.status}</Text>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                        <Text style={styles.statusPart}>Status:</Text>
+                        <Text style={getStatusColor()}>{character.status}</Text>
+                    </View>
                 </View>
             </TouchableOpacity>
         </View>
