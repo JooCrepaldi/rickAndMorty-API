@@ -1,12 +1,12 @@
 import React from "react";
-import { View, Text, Image, ScrollView, TouchableOpacity, useState } from 'react-native';
+import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { styles } from '../components/detailPanelStyles/detailStyles';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useFavorites } from '../context/FavoritesContext';
 
 export default function CharacterDetailScreen({ route }) {
   const { character } = route.params;
- 
-  //pergar id da página, salvar em um array, buscar o card pelo id no SavedScreen.js
+  const { toggleFavorite } = useFavorites();
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -31,7 +31,8 @@ export default function CharacterDetailScreen({ route }) {
 
           <TouchableOpacity
             style={styles.button}
-            /* onPress={()} */      >
+            onPress={() => toggleFavorite(character.id)}
+          >
             <Image
               source={require('../../assets/bookMarkIcon.png')}
               resizeMode="contain"
