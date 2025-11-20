@@ -11,17 +11,16 @@ export default function CharacterCard({ character }) {
 
     const getID = async (id) => {
         try {
-          const data = await characterService.getById(id);
-          console.log('Personagem retornado:', data);
-         
-          navigation.navigate('CharacterDetail', { character: data });
-        } catch (error) {
-          console.error('Erro ao buscar personagem:', error);
-        }
-      };
+            const data = await characterService.getById(id);
 
-      const getStatusColor = () => {
-        switch(character.status) {
+            navigation.navigate('CharacterDetail', { character: data });
+        } catch (error) {
+            console.error('Erro ao buscar personagem:', error);
+        }
+    };
+
+    const getStatusColor = () => {
+        switch (character.status) {
             case 'Alive':
                 return styles.status.Alive;
             case 'Dead':

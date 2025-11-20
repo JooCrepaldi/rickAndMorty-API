@@ -1,15 +1,17 @@
 import React from "react";
-import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, Text, Image, ScrollView, TouchableOpacity, useState } from 'react-native';
 import { styles } from '../components/detailPanelStyles/detailStyles';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function CharacterDetailScreen({ route }) {
   const { character } = route.params;
+ 
+  //pergar id da página, salvar em um array, buscar o card pelo id no SavedScreen.js
 
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView
-      style={{ flex: 1 }}
+        style={{ flex: 1 }}
         contentContainerStyle={[styles.container, { flexGrow: 1 }]}
         showsVerticalScrollIndicator={false}
       >
@@ -27,7 +29,9 @@ export default function CharacterDetailScreen({ route }) {
             {character.name}
           </Text>
 
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity
+            style={styles.button}
+            /* onPress={()} */      >
             <Image
               source={require('../../assets/bookMarkIcon.png')}
               resizeMode="contain"
@@ -44,24 +48,24 @@ export default function CharacterDetailScreen({ route }) {
           </View>
 
           <View style={styles.infoRow}>
-            <Text style={styles.label}>Espécie:</Text>
+            <Text style={styles.label}>Species:</Text>
             <Text style={styles.infoText}>{character.species}</Text>
           </View>
 
           {character.type ? (
             <View style={styles.infoRow}>
-              <Text style={styles.label}>Tipo:</Text>
+              <Text style={styles.label}>Type:</Text>
               <Text style={styles.infoText}>{character.type}</Text>
             </View>
           ) : null}
 
           <View style={styles.infoRow}>
-            <Text style={styles.label}>Gênero:</Text>
+            <Text style={styles.label}>Gender:</Text>
             <Text style={styles.infoText}>{character.gender}</Text>
           </View>
 
           <View style={styles.infoRow}>
-            <Text style={styles.label}>Origem:</Text>
+            <Text style={styles.label}>Origin:</Text>
             <Text style={styles.infoText}>{character.origin?.name || 'Desconhecido'}</Text>
           </View>
         </View>
