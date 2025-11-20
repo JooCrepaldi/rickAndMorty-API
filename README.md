@@ -12,12 +12,13 @@ A small **React Native app built with Expo** that explores the Rick and Morty un
 ---
 
 ### ✨ Features
- - Fetches data from the Rick and Morty API
- - Displays character list with images, name, and status
- - Character detail page with extra information
- - Local “Saved Characters” section
- - Clean UI with a dark theme inspired by the show
- - Built with Expo, React Native, and modern component patterns
+- Fetches data from the **Rick and Morty API**
+- Displays character list with images, name, and status
+- **Built-in search system** using a responsive search bar
+- Character detail page with extra information
+- Local “Saved Characters” section
+- Clean UI with a dark theme inspired by the show
+- Built with **Expo**, **React Native**, and modern component patterns
 
 ---
 
