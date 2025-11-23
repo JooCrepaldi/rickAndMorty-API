@@ -26,12 +26,12 @@ A small **React Native app built with Expo** that explores the Rick and Morty un
 
 #### Clone the project
 ```bash
-git clone https://github.com/JooCrepaldi/rickAndMorty-API
+git clone https://github.com/JooCrepaldi/rickAndMorty-App
 ```
 
 #### Enter the project directory
 ```bash
-cd rickAndMorty-API
+cd rickAndMorty-App
 ```
 
 #### Install dependencies
